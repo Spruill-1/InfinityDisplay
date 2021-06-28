@@ -15,12 +15,12 @@ else:
 
 while rval:
     rval, frame = vc.read()
-    key = cv2.waitKey(50)
+    key = cv2.waitKey(15)
 
     smaller = cv2.resize(frame, (16,9), interpolation=cv2.INTER_CUBIC)
-    smaller = cv2.blur(smaller, (3,3))
+    smaller = cv2.blur(smaller, (2,2), borderType=cv2.BORDER_REFLECT)
 
-    print(smaller[1][1], smaller[1][2], smaller[1][3])
+    # print(smaller[1][1], smaller[1][2], smaller[1][3])
 
     larger = cv2.resize(smaller, (640, 480), interpolation=cv2.INTER_AREA)
 
