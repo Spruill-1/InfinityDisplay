@@ -27,7 +27,7 @@ while rval:
 
     larger = cv2.GaussianBlur(frame, (10,10), 0)
 
-    cv2.rectangle(larger, (10,10), (630, 470), (0,0,0), -1)
+    cv2.rectangle(larger, (11,11), (630, 470), (0,0,0), -1)
 
     cv2.imshow("preview",larger)
 
