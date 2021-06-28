@@ -25,7 +25,7 @@ while rval:
     #larger = cv2.resize(smaller, (640, 480), interpolation=cv2.INTER_AREA)
 
 
-    larger = cv2.GaussianBlur(frame, (10,10))
+    larger = cv2.GaussianBlur(frame, (10,10), 0)
 
     cv2.rectangle(larger, (10,10), (630, 470), (0,0,0), -1)
 
